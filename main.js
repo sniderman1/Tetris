@@ -561,9 +561,9 @@ const startMove = () => {
 let speed = 500;
 
 const setSpeed = () =>{
-    if(numberOfCleared % 2 == 0 && speed > 199){
+    if(numberOfCleared % 10 == 0 && speed > 199){
         console.log('speed',speed)
-        speed = speed - 200;
+        speed = speed - 100;
         speedDisplay.innerHTML = speed;
         main();
     }
