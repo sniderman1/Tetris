@@ -1,0 +1,98 @@
+#mainContainer{
+    width: 400px;
+    height: 800px;
+    position: relative;
+    background: black;
+}
+#top{
+    display: inline-flex;
+}
+
+#nextUp{
+    height: 160px;
+    width: 160px;
+    background-color: black;
+}
+.block{
+    width: 40px;
+    height: 38px;
+    border: solid 1px rgb(203, 203, 203);
+}
+
+.inline{
+    display: inline-flex;
+}
+.colum{
+    display: grid
+}
+#mainBody{
+    text-align: center;
+}
+.padding20{
+    padding: 20px;
+}
+
+.inline{
+    display: flex;
+}
+
+.gridRow {
+    display: flex;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.border {
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+button{
+    border-radius: 5px;   
+    font-size: x-large; 
+}
+
+#start{
+    background-color: green;
+    width: 100px;
+    height: 50px;    
+}
+
+#restart{
+    background-color: red;
+    color: white;
+    width: 100px;
+    height: 50px;  
+}
+
+#inputs{
+    font-size: x-large; 
+}
+
+    
