@@ -336,24 +336,6 @@ const createCheckShape = (dir) => {
         else if(col > leftLimit && col < rightLimit && row < bottom){
             tempShape['b' + i] = [row, col];   
         }
-        // else{
-        //     if(row >= bottom){
-        //         isBottom = true;
-        //         bottomHit();
-        //     }
-        //     else if(dir == 'rotate'){
-        //         if(rotateNum == 0){
-        //             rotateNum = shapes[choice].orientations.length - 1;
-        //         }
-        //         else{
-        //             rotateNum = rotateNum - 1;    
-        //         }
-        //         setOrientation();
-        //     }
-        //     isPossible = false;
-        //     console.log("Can't move there");
-        // }
-
     }
     if(isBottom){
         bottomHit();    
@@ -559,12 +541,14 @@ const startMove = () => {
 }
 
 let speed = 500;
+let isChaningSpeed = false;
 
 const setSpeed = () =>{
     if(numberOfCleared % 10 == 0 && speed > 199){
         console.log('speed',speed)
         speed = speed - 100;
         speedDisplay.innerHTML = speed;
+        isChaningSpeed = true;
         main();
     }
 }
@@ -580,16 +564,18 @@ const main = () => {
     clearInterval(id);
     id = setInterval(frame, speed);
     function frame(){
-        if(start == true && !isGameOver){
+        if(start == true && !isGameOver && !isChaningSpeed){
             moveDown();
         }
         else{
+            isChaningSpeed = false;
             clearInterval(id);
         }    
     }  
 }
 
 const restartGame = () => {
+    isChaningSpeed = false;
     numberOfCleared = 0;
     speed = 500;
     speedDisplay.innerHTML = speed;
